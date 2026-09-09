@@ -16,3 +16,10 @@ IELTS対策アプリ（Reading能力向上機能つき）のシンプルなWeb�
 ## 使い方
 
 `/home/runner/work/ielts-study-app/ielts-study-app/index.html` をブラウザで開くと利用できます。
+
+## ここから開ける公開URL（GitHub Pages）
+
+このリポジトリにはGitHub Pages自動デプロイを設定しました。
+Actionsのデプロイ完了後、以下URLで開けます。
+
+- https://imanaka20090702-bot.github.io/ielts-study-app/
