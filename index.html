@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS Reading Trainer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>IELTS Reading能力向上トレーナー</h1>
+        <p>シンプルに、毎日続けるためのReading学習ダッシュボード</p>
+      </header>
+
+      <section class="card" id="curriculum-section">
+        <h2>1. 段階的な学習カリキュラム</h2>
+        <label>
+          現在の達成度（%）
+          <input id="achievement" type="range" min="0" max="100" value="35" />
+        </label>
+        <p>現在レベル: <strong id="current-level"></strong></p>
+        <p>次のステップ: <span id="next-step"></span></p>
+        <ul id="level-practice"></ul>
+      </section>
+
+      <section class="card" id="vocabulary-section">
+        <h2>2. 語彙学習機能</h2>
+        <div class="flashcard" id="flashcard">
+          <p id="flashcard-word"></p>
+          <p id="flashcard-detail" class="muted"></p>
+          <div class="row">
+            <button id="flip-card">意味・例文を表示</button>
+            <button id="next-card">次の単語</button>
+          </div>
+        </div>
+        <label>
+          習熟度（1-5）
+          <input id="mastery" type="number" min="1" max="5" value="3" />
+        </label>
+        <button id="save-mastery">習熟度を保存</button>
+        <p id="mastery-status"></p>
+      </section>
+
+      <section class="card" id="speed-section">
+        <h2>3. 速読トレーニング</h2>
+        <p id="reading-passage">The rapid growth of urban farming has transformed unused rooftop spaces into productive gardens, helping cities improve food security while reducing transportation emissions.</p>
+        <div class="row">
+          <button id="start-speed">計測開始（60秒）</button>
+          <span>残り時間: <strong id="time-left">60</strong>s</span>
+        </div>
+        <label>
+          正答数（全5問）
+          <input id="correct-answers" type="number" min="0" max="5" value="4" />
+        </label>
+        <button id="calculate-speed">WPMと分析</button>
+        <p id="wpm-result"></p>
+        <p id="balance-result"></p>
+        <p id="speed-plan"></p>
+      </section>
+
+      <section class="card" id="skills-section">
+        <h2>4. 読解スキル別トレーニング</h2>
+        <div id="skill-progress"></div>
+      </section>
+
+      <section class="card" id="weakness-section">
+        <h2>5. 弱点克服機能</h2>
+        <label>
+          間違えた問題タイプ
+          <select id="mistake-type">
+            <option value="True/False/Not Given">True/False/Not Given</option>
+            <option value="Matching Headings">Matching Headings</option>
+            <option value="Sentence Completion">Sentence Completion</option>
+          </select>
+        </label>
+        <button id="add-mistake">弱点に追加</button>
+        <ul id="mistake-list"></ul>
+        <p id="weakness-course"></p>
+      </section>
+
+      <section class="card" id="stats-section">
+        <h2>6. 学習統計とプログレス表示</h2>
+        <p id="study-time"></p>
+        <div id="accuracy-graph"></div>
+        <p id="strength-weakness"></p>
+        <p id="score-prediction"></p>
+      </section>
+
+      <section class="card" id="test-section">
+        <h2>7. クイズとテスト</h2>
+        <div class="row">
+          <button data-test="mini">10分ミニテスト</button>
+          <button data-test="section">セクション別テスト</button>
+          <button data-test="full">Full-length模試</button>
+        </div>
+        <p id="test-feedback"></p>
+      </section>
+
+      <section class="card" id="motivation-section">
+        <h2>8. 学習モチベーション維持</h2>
+        <p id="streak"></p>
+        <p id="badges"></p>
+        <label>
+          今週の目標学習時間（時間）
+          <input id="goal-hours" type="number" min="1" max="30" value="8" />
+        </label>
+        <button id="set-goal">目標を設定</button>
+        <p id="goal-status"></p>
+        <p id="schedule"></p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
